@@ -1,5 +1,5 @@
 .title {
-    font-size: 29px;
+ 
     &_fz74 {
         font-size: 74px;
         font-weight: bold;
@@ -7,6 +7,7 @@
     &_fz62 {
         font-size: 62px;
         font-weight: 800;  
+        text-align: center;
     }
     &_fz58 {
         font-size: 58px;
@@ -27,8 +28,8 @@
         color: #ffffff;
     }
     &_fz27 {
-        font-size: 62px;
-        font-weight: 800;  
+        font-size: 27px;
+        // font-weight: 800;  
     }
     &_fz25 {
         font-size: 25px;
