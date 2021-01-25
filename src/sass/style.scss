@@ -14,7 +14,13 @@
     width: 1440px;
     margin: 0 auto;
 }
-
+@import 'blocks/title.scss';
 @import 'blocks/header.scss';
 @import 'blocks/main.scss';
 @import 'blocks/button.scss';
+@import 'blocks/catalog.scss';
+@import 'blocks/blog.scss';
+@import 'blocks/motivation.scss';
+@import 'blocks/achievements.scss';
+@import 'blocks/subtopics.scss';
+@import 'blocks/footer.scss';
