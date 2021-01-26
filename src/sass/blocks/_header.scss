@@ -12,22 +12,39 @@
     justify-content: space-between;
     align-items: center;
     min-height: 128px;
+    // height: 130px;
     padding: 34px 0 0 78px;
 
   
     &__logo {
         .wrapper {
+            //for animation logo
+            position: relative;
             display: flex;
             justify-content: center; 
-            width: 120px;
+            align-items: center;
+            width: 104px;
+            height: 104px;
+            // background-color: rgb(255, 255, 255) ;
+            // box-shadow: 0 0 0 5px rgb(255, 255, 255) ;
+            border-radius: 50%;
+             &:hover {
+					cursor: pointer; 
+					animation:bounceOut 0.9s linear;
+				}
         }
-        &_img {
-            display: inline-block;
-            width: 91px;
-            height: 94px;
-        }
-        img{max-width: 100%;}
     }
+
+        &_img {
+            // display: block;
+            position: absolute;
+            width: 94px;
+            height: 94px;
+            padding-right: 10px;
+            margin: 40px;       
+        img{max-width: 100%;}
+
+        }
 
     &__menu {
         .wrapper {
@@ -43,16 +60,39 @@
         width: 748px;  
         height: 12px; 
         list-style-type: none;
-        
         a {
+            position: relative;
+            // display: inline-block;
             font-size: 25px;
             letter-spacing: 3.4px;
             color: #54524f;
             text-transform: uppercase;
             text-decoration: none;
+            // transition: .4s;
         }
+        .line {
+            position: relative;
+            display: block;
+             a::before {
+                content: '';
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #54524f;
+                opacity: 0.4;
+                transition: 0.3s;
+                transform: scaleX(0);
+            }
+            a:hover:before {
+                width: 100%;
+                transform: scaleX(1);
+            }
+        }              
     }
     
+
     &__search {
         .wrapper {
             display: flex;
@@ -62,8 +102,8 @@
 
         .search-box {
             position: relative;
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
@@ -93,14 +133,14 @@
             top: 50%;
             right: 0;
             z-index: 1;
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
             border-radius: 50px;
             color: #fff;
             background:  $second-color;
             font-size: 20px;
             text-align: center;
-            line-height: 50px;
+            line-height: 45px;
             transform: translateY(-50%);
             cursor: pointer;
             transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -110,8 +150,8 @@
             position: absolute;
             top: 50%;
             right: 5px;
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
             border-radius: 50px;
             color: $second-color;
             background:  #fff;
@@ -200,22 +240,30 @@
         letter-spacing: 1.03px;
         color: #54524f;
     }
-
-
 }    
 
 
-@keyframes slide {
+// @keyframes slide {
 
-    0% {
-        background-image: url('../img/first_screen.jpg');
-    }
-    33% {
-        background-image: url('../img/first_screen2.jpg');
-    }
-    67% {
-        background-image: url('../img/first_screen3.jpg');
-    }
+//     0% {
+//         background-image: url('../img/first_screen.jpg');
+//     }
+//     33% {
+//         background-image: url('../img/first_screen2.jpg');
+//     }
+//     67% {
+//         background-image: url('../img/first_screen3.jpg');
+//     }
+// }
+
+//animation logo
+@keyframes bounceOut {
+        0%{ box-shadow: 0 0 0 4px $second-color; opacity:1;}
+        15%{ box-shadow: 0 0 0 1px $second-color; opacity:1;}
+        25%{ box-shadow: 0 0 0 10px $second-color; opacity:1; }
+        55%{ box-shadow: 0 0 0 4px $second-color; opacity:1;}
+        75%{ box-shadow: 0 0 0 5px $second-color; opacity:1;}
+        100%{ box-shadow: 0 0 0 2px $second-color; opacity:1;}
 }
 
 
