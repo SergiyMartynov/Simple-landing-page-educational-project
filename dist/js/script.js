@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
     function reNameBtn () {
-        document.getElementById('reNameBtn').innerHTML = 'close sliders';
+        document.getElementById('reNameBtn').innerHTML = 'Close tabs';
         }
     function NameBtn() {
         document.getElementById('reNameBtn').innerHTML = 'Show More';
